@@ -9,12 +9,21 @@
 <body>
     <label>First Name :</label>
     <input type="text" id="fname" placeholder="Enter the First name" required/>
-    <label>Second Name :</label>
+    <label>Email ID :</label>
     <input type="email" id="email" placeholder="Enter the Email id" required/>
     <label>Password :</label>
     <input type="password" id="password" placeholder="New password" required/>
-    <button onclick="register()"></button>
-    
+    <button onclick="register()">Submit </button>
+    <script>
+        function register(){
+            var name= document.getElementById('fname')
+            localStorage.setItem('fnamekey',fname.value)
+            var email=document.getElementById('email')
+            localStorage.setItem('emailkey', email.value)
+            var password1=document.getElementById('password')
+            sessionStorage.setItem('passkey',password1.value)
+        }
+    </script>
     
 </body>
 </html>
