@@ -9,12 +9,16 @@
 <body>
     <form>
         <label>Name :</label>
-        <input type="text" id="name" required >
+        <input type="text" id="name" required ><br>
+        <label>phone :</label>
+        <input type="number" id="number" required ><br>
         <button onclick="post()">Submit</button>
         <script>
             function post(){
                 var name= document.getElementById('name')
                 localStorage.setItem('namekey',name.value)
+                var number=document.getElementById('number')
+                sessionStorage.setItem('phonekey',number.value)
             }
         </script>
     </form>
