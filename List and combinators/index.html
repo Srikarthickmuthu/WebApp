@@ -6,48 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul li{
+        div p{
             color: red;
         }
-        ol>li{
+        div>p{
             font: 30px bold;
+            background-color: antiquewhite;
         }
-        div~p{
+        p~b{
             background-color: yellowgreen;
         }
-        div+p{
+        p+i{
             background-color: pink;
-        }
+        }       
     </style>
 </head>
-<body>
-    <h1>Ordered list</h1>
-    <ol>
-        <li>First Element</li>
-        <li>Second Element</li>
-        <li>Third Element</li>
-    </ol>
-
-    <h1>Unordered list</h1>
-    <ul>
-        <li>First Elemnt</li>
-        <li>Second Element</li>
-        <li>Third Element</li>
-    </ul>
-    <p>first line</p>
+<body>  
+    <h1>Decendant combinator</h1>
     <div>
-        <p>
-            child
-        </p>
+        <p>First line</p>
+        <p>Second line</p>
+        <span><p>Third line</p></span>
     </div>
-    <p>
-        next sibiling
-    </p>
-    <pre>hai and alll</pre>
-    <p>
-        next next sibiling
-    </p>
 
+    <h2>child combinator</h2>
+    <div>
+        <p>First line</p>
+        <p>Second line</p>
+        <span><p>Third line</p></span>
+    </div> 
     
+    <h2>General sibiling</h2>
+    <div>
+        <p>This line <i>contains</i> italic tag and <b>bold tag</b> and <u>underline tags</u></p>
+        <b>adjacent sibling</b>
+        <b>general sibling</b>
+    </div>
+
+    <h2>Adjacent sibiling</h2>
+    <div>
+        <p>This line <i>contains</i> italic tag and <b>bold tag</b> and <u>underline tags</u></p>
+        <i>adjacent sibling</i>
+        <i>general sibling</i>
+    </div>
 </body>
 </html>
